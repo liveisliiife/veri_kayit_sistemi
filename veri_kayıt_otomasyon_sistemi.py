@@ -1,6 +1,7 @@
 import re
 import time
 import os
+
 class Kayit:
     def __init__(self, program_ad):
         self.program_adi = program_ad
