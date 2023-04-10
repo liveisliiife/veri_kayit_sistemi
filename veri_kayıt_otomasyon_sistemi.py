@@ -57,7 +57,7 @@ class Kayit:
         return secim
 
     def kayit_ekle(self):  # dosya kayıt
-        if not os.path.isfile("Bilgiler.txt"):
+        if not os.path.isfile("Bilgiler.txt"):  # eğer bu isimde klasör yoksa oluşturuyoruz.
             with open("Bilgiler.txt", "w") as file:
                 print("Bilgiler.txt isimli dosya oluşturuldu.")
                 pass
@@ -137,8 +137,6 @@ class Kayit:
                 break
 
         # önce dosyayı okuyacaz. eğer dosya boşsa dosya_no 1'den başlayacak dosya doluysa uygun sayıdan başlayacak
-        # 1- Ali ...
-        # 2- Veli ... şeklinde olacak dosya içi
         with open("Bilgiler.txt", "r", encoding="utf-8") as file:
             satir_sayisi = file.readlines()
         if len(satir_sayisi) == 0:
